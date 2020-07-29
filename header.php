@@ -65,8 +65,8 @@
                 <li><a href="pages/archive3.html">Archive 3</a></li>
               </ul>
             </li>
-            <li><a href="pages/single.html">Single page</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="single.php">Single page</a></li>
+            <li><a href="pages/contact.php">Contact</a></li>
             <li><a href="404.php">404 page</a></li>
           </ul>
         </div>
