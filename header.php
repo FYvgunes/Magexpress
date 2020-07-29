@@ -67,7 +67,7 @@
             </li>
             <li><a href="pages/single.html">Single page</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
-            <li><a href="pages/404.html">404 page</a></li>
+            <li><a href="404.php">404 page</a></li>
           </ul>
         </div>
       </div>
