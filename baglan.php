@@ -2,13 +2,28 @@
 $servername = "localhost";
 $database = "macexpolorer";
 $username = "root";
-$password = "1q2w3e4r5T*-?";
+$password = "";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = @mysqli_connect($servername, $username, $password, $database);
+$conn -> set_charset("utf8");
 // Check connection
 if (!$conn) {
     die("Bağlantı Hatası: " . mysqli_connect_error());
 }
-echo "Bağlantı Başarılı";
-mysqli_close($conn);
+
+if(!$conn)
+{
+	die("Baglanti hatası:".mysqli_connect_error());
+}
+// // {
+// // 	echo "Veritabanı Hatası :".mysqli_connect_error(); echo "<br>";
+// // 	exit();
+// // }
+
+
+
+?>
+
+
+
 
