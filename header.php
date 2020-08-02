@@ -40,7 +40,7 @@ include 'baglan.php';
              
 
                ?>
-              <li><a href="<?php $sonuc["MenuUrl"] ?>"><?php echo $sonuc["MenuAd"]; ?></a></li>
+              <li><a href="<?php echo $sonuc["MenuUrl"] ?>"><?php echo $sonuc["MenuAd"]; ?></a></li>
 
                <?php } ?>
              
