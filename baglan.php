@@ -11,18 +11,9 @@ if (!$conn) {
     die("Bağlantı Hatası: " . mysqli_connect_error());
 }
 
-if(!$conn)
-{
-	die("Baglanti hatası:".mysqli_connect_error());
-}
-// // {
-// // 	echo "Veritabanı Hatası :".mysqli_connect_error(); echo "<br>";
-// // 	exit();
-// // }
-
-
 
 ?>
+
 
 
 

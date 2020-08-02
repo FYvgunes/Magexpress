@@ -33,10 +33,17 @@ include 'baglan.php';
           <div class="header_top_left">
             <!-- Headar Top Menu Start -->
             <ul class="top_nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="pages/page.html">About</a></li>
-              <li><a href="pages/contact.html">Contact</a></li>
-              <li><a href="pages/404.html">Error Page</a></li>
+              <?php 
+              $sorgu = $conn ->query("SELECT * FROM Menuler");
+              while ($sonuc = $sorgu -> fetch_assoc()) {
+               
+             
+
+               ?>
+              <li><a href="<?php $sonuc["MenuUrl"] ?>"><?php echo $sonuc["MenuAd"]; ?></a></li>
+
+               <?php } ?>
+             
             </ul>
           </div>
           <!-- Header Top Finish -->
@@ -62,20 +69,23 @@ include 'baglan.php';
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <!-- Header Start -->
-          <ul class="nav navbar-nav custom_nav">
-           <?php
+         
+         <ul class="nav navbar-nav custom_nav">
+          <?php 
+          $sorgu = $conn ->query("SELECT * FROM Menuler");
 
-            $PR_sql = $conn->query("SELECT * FROM Menuler ORDER BY Menuid asc");
-            //$sonuc = $PR_sql->fetch_assoc(); 
-            while ($PR_cek = $PR_sql->fetch_assoc()) {
-               
-                          
-            ?>
+          
+          while ($sonuc = $sorgu->fetch_assoc()) {
+           
+          
 
+           ?>
+           <li class=""><a href="<?php echo $sonuc["MenuUrl"] ?>"><?php echo $sonuc["MenuAd"] ?></a>
+           </li>
+           <?php 
 
-        
-            <li class=""><a href="<?php echo $PR_cek['MenuUrl'] ?>"><?php echo $PR_cek["MenuAd"]; ?></a></li>
-             <?php } ?>  
+           } ?>
+           
 
 
             
