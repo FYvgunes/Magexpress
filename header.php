@@ -65,14 +65,19 @@ include 'baglan.php';
           <ul class="nav navbar-nav custom_nav">
            <?php
 
-            $PR_sql = $conn->query("SELECT * FROM Menuler");
-            $sonuc = $PR_sql->fetch_assoc();         
-
-?>
+            $PR_sql = $conn->query("SELECT * FROM Menuler ORDER BY Menuid asc");
+            //$sonuc = $PR_sql->fetch_assoc(); 
+            while ($PR_cek = $PR_sql->fetch_assoc()) {
+               
+                          
+            ?>
 
 
         
-            <li class=""><a href="index.html"><?php echo $sonuc["MenuAd"]; ?></a></li>
+            <li class=""><a href="<?php echo $PR_cek['MenuUrl'] ?>"><?php echo $PR_cek["MenuAd"]; ?></a></li>
+             <?php } ?>  
+
+
             
           </ul>
           <!-- Header Finish -->
